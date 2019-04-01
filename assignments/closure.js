@@ -1,6 +1,17 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+console.log('========= Closure =========');
 
+const outerScope = () => {
+  const outerVar = `parent/outer scoped variables`;
+  const closure = () => {
+    const innerVar = `inner/closure scoped variables`;
+    console.log(`I have acces to both ${innerVar} and ${outerVar} within the closure`);
+  }
+  console.log(closure());
+}
+
+outerScope();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
